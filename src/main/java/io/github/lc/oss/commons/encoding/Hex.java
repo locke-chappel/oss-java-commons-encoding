@@ -1,4 +1,4 @@
-package com.github.lc.oss.commons.encoding;
+package io.github.lc.oss.commons.encoding;
 
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;

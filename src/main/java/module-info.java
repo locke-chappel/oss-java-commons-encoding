@@ -1,5 +1,5 @@
-module com.github.lc.oss.commons.encoding {
-    requires com.github.lc.oss.commons.util;
+module io.github.lc.oss.commons.encoding {
+    requires io.github.lc.oss.commons.util;
 
-    exports com.github.lc.oss.commons.encoding;
+    exports io.github.lc.oss.commons.encoding;
 }

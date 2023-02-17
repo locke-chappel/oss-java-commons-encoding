@@ -1,4 +1,4 @@
-package com.github.lc.oss.commons.encoding;
+package io.github.lc.oss.commons.encoding;
 
 public interface Encoder {
     String encode(byte[] data);

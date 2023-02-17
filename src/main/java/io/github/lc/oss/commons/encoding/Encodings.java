@@ -1,8 +1,8 @@
-package com.github.lc.oss.commons.encoding;
+package io.github.lc.oss.commons.encoding;
 
 import java.util.Set;
 
-import com.github.lc.oss.commons.util.TypedEnumCache;
+import io.github.lc.oss.commons.util.TypedEnumCache;
 
 public enum Encodings implements Encoder {
     Base64(new Base64()),
