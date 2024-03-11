@@ -12,7 +12,7 @@
     <version>1.0.10</version>
     <name>${project.artifactId}</name>
     <description>A simple encoding library implementing some common encoding algorithms</description>
-    <url>https://github.com/locke-chappel/oss-commons-encoding</url>
+    <url>https://github.com/locke-chappel/oss-java-commons-encoding</url>
 
     <licenses>
         <license>
