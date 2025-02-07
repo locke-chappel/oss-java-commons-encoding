@@ -16,9 +16,36 @@ public class HexTest extends AbstractEncoderTest {
     }
 
     @Test
+    public void test_producesUpperCaseAndConsumesUpperAndLower() {
+        String text = "Something that procuces hex digits above 10.";
+        String encoded = this.getEncoder().encode(text);
+
+        /*
+         * Note: Case matters in this assertion. All digits must be upper case and we
+         * need to see digits above 10.
+         */
+        Assertions.assertTrue(encoded.contains("F"));
+        Assertions.assertEquals(
+                "536F6D657468696E6720746861742070726F637563657320686578206469676974732061626F76652031302E", encoded);
+
+        String result = this.getEncoder().decodeString(encoded.toUpperCase());
+        Assertions.assertEquals(text, result);
+
+        result = this.getEncoder().decodeString(encoded.toLowerCase());
+        Assertions.assertEquals(text, result);
+    }
+
+    @Test
     public void test_decodeRange() {
         try {
             this.getEncoder().decode("A");
+            Assertions.fail("Expected Exception");
+        } catch (IllegalArgumentException ex) {
+            Assertions.assertEquals("Data string is not valid hexadecimal", ex.getMessage());
+        }
+
+        try {
+            this.getEncoder().decode("AQ");
             Assertions.fail("Expected Exception");
         } catch (IllegalArgumentException ex) {
             Assertions.assertEquals("Data string is not valid hexadecimal", ex.getMessage());
