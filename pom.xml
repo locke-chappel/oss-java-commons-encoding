@@ -5,11 +5,11 @@
     <parent>
         <groupId>io.github.locke-chappel.oss.commons</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.18</version>
+        <version>1.0.19</version>
     </parent>
 
     <artifactId>encoding</artifactId>
-    <version>1.0.18</version>
+    <version>1.0.19</version>
     <name>${project.artifactId}</name>
     <description>A simple encoding library implementing some common encoding algorithms</description>
     <url>https://github.com/locke-chappel/oss-java-commons-encoding</url>
